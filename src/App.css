@@ -27,31 +27,62 @@
 .App-main {
   line-height: 1.6rem;
 }
+.App-main section {
+  padding-bottom: 4rem;
+}
 .App-main #profile {
   display: flex;
+  flex-direction: row;
   margin: auto;
   justify-content: center;
   align-items: center;
 }
 .App-main #profile h1 {
   font-size: 1.70rem;
-
 }
 .App-main h1, .App-main small {
-  display:contents;
+  display: contents;
   flex: 1;
 }
 #about {
-
   display: block;
 }
-
 #about .about-subtitle {
   text-align: start;
   display: inline;
 }
-#about p {
-  text-align: start;
-  display: block;
-
+#bio ul {
+  list-style: none;
+}
+#hobbies .hobbies-ul {
+  list-style: none;
+}
+#hobbies .hobbies-ul img {
+  padding-top: 4px;
+  margin-right: 1rem;
+}
+footer {
+  text-align: center;
+  padding: 20px 20px auto 20px;
+}
+footer #icons {
+  padding-top: 1rem;
+}
+footer #icons img {
+  margin-right: 1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .App-main #profile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    margin: 0 auto;    
+  }
+  .App-header nav ul {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: space-around;
+  }
 }
