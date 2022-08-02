@@ -2,10 +2,15 @@
   padding: 0;
   margin: 0;
 }
+@counter-style space {
+  system: cyclic;
+  symbols: " l ";
+  suffix: " l ";
+}
 .App {
   background-color: #282c34;
   color: white;
-  padding: 15px 25%;
+  padding: 15px 20%;
 }
 .App-header {
   padding-bottom: 75px;
@@ -31,18 +36,53 @@
   padding-bottom: 4rem;
 }
 .App-main #profile {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   margin: auto;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 .App-main #profile h1 {
-  font-size: 1.70rem;
+  font-size: 2rem;
 }
-.App-main h1, .App-main small {
+/* .App-main h1, .App-main small {
   display: contents;
   flex: 1;
+} */
+.App-main #profile .card-profile {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+}
+.App-main #profile .container-profile {
+  display: table-cell;
+}
+.App-main #profile img {
+  width: 250px;
+  vertical-align: middle;
+  padding-right: 15px;
+  display: gric;
+}
+.App-main #profile h1, .App-main #profile p {
+  position: relative;
+  right: 20%;
+}
+.App-main #profile .card-profile #icons {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-content: start;
+  text-align: start;
+}
+.container-profile ul {
+  display: flex;
+}
+.container-profile ul li {
+  margin-right: 4%;
+  display: inline-block;
+}
+.App-main #profile .card-profile #icons img {
+  margin: 8px;
 }
 #about {
   display: block;
@@ -54,12 +94,58 @@
 #bio ul {
   list-style: none;
 }
+#hobbies .hobbies-subtitle {
+  padding-bottom: 5px;
+}
 #hobbies .hobbies-ul {
   list-style: none;
+  padding-bottom: 0;
+}
+#hobbies .hobbies-ul small {
+  font-size: 1rem;
 }
 #hobbies .hobbies-ul img {
-  padding-top: 4px;
+  padding-top: 6px;
   margin-right: 1rem;
+}
+#hobbies #skills-interests ul {
+  display: flex;
+}
+#hobbies #skills-interests li {
+  margin-right: 4%;
+  display: inline;
+  list-style: none;
+  list-style-type: space;
+}
+#hobbies #skills-interests li:first-child {
+  margin-right: 4%;
+  font-size: 1.1rem;
+}
+#projects {
+  overflow: hidden;
+  justify-content: stretch;
+}
+#projects .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+#projects .card h4, #projects .card p {
+  /* text-align: end;
+  vertical-align: middle; */
+}
+#projects .container ul {
+  display: inline-block;
+}
+#projects .container ul li {
+  margin-right: 20px;
+  list-style: none;
+  float: left;
+}
+#projects .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#projects .container {
+  padding: 8px 16px;
 }
 footer {
   text-align: center;
@@ -72,12 +158,33 @@ footer #icons img {
   margin-right: 1rem;
 }
 @media only screen and (max-width: 1200px) {
+  body {
+    background-color: #282c34;
+  }
   .App-main #profile {
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     vertical-align: middle;
     margin: 0 auto;    
+  }
+  .App-main #profile {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+  }
+  .App-main #profile .card-profile {
+    border: 1px solid black;
+    padding: 30px;
+    width: 100%;
+    overflow: auto;
+  }
+  .App-main #profile h3, .App-main #profile p {
+    background-color: #282c34;
+
+  }
+  .App-main #profile h3 {
+    font-size: 1.4rem;
   }
   .App-header nav ul {
     justify-content: center;
